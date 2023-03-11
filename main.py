@@ -10,4 +10,4 @@ else:
 
 # desks = first_class//2+bool(first_class%2!=0)+second_class//2+bool(second_class%2!=0)+therd_class//2+bool(therd_class%2!=0)
 # print(f'Всего понадобится {desks} парт')
-## hjkjh
+## hjkjh ewrtyh
