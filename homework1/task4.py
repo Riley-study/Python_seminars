@@ -9,4 +9,4 @@ number_shadoof = int(input("Введите количество журавлик
 if number_shadoof % 6 == 0 :
     print(f'{number_shadoof} -> {number_shadoof//6} {number_shadoof//6*4} {number_shadoof//6}')
 else:
-    print("Введено некорректное значение!")
+    print("Введено некорректное значение")
