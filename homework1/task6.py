@@ -19,4 +19,4 @@ if ticket_number >= 100000 and ticket_number <=999999:
     else:
         print("не счастливый")
 else:
-    print("неверно введен номер билета")
+    print("неверно введен номер билета!")
