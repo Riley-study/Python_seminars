@@ -15,7 +15,7 @@ while count <= coins_number:
     else:
         count_eagle += 1
     count += 1
-    print(next_coins)
+        print(next_coins)
 
 if count_zero <= count_eagle:
     print(f'нужно перевернуть минимум {count_zero} шт')
