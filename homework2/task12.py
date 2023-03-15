@@ -17,4 +17,3 @@ while first_number <= summ_number:
 if first_number > summ_number:
     print("таких чисел не существует")
 
-
