@@ -14,6 +14,7 @@ for i in range(number_of_elements):
     diff.append(random_list[i] - found_element)
     if diff[i] < 0:
         diff[i] = -diff[i]
+
 # print(diff)
 
 min_value = diff[0]
