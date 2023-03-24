@@ -4,6 +4,7 @@
 # 2 2
 #    4
 
+
 num_a = int(input("Enter number A: "))
 num_b = int(input("Enter number B: "))
 
