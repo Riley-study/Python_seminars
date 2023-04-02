@@ -18,7 +18,7 @@ num_rows, num_columns = 6, 6
 def print_operation_table(x, y):
     list_a = [i for i in range(1, x+1)]
     for item in range(1, y+1):
-        list_b = list(map(lambda c: c * item, list_a))
+        list_b = list(map(lambda i: i * item, list_a))
         print(*list_b)
 
 print_operation_table(num_rows, num_columns)
