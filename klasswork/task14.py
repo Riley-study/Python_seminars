@@ -28,4 +28,3 @@ def filter_list_of_orbit(initial_list):
     print(f'самая далекая планета вращается по эллипсу с полуосями: {new_list[index]}')
 
 list_of_orbits = filter_list_of_orbit(list_of_orbits)
-
