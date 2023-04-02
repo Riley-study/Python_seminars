@@ -15,7 +15,6 @@
 
 num_rows, num_columns = 6, 6
 
-
 def print_operation_table(rows, columns):
     for i in range(1, rows+1):
         res_list = list()
