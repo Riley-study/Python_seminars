@@ -10,6 +10,7 @@
 
 poem_Puh = input("Винни-Пух, напиши свое стихотворение: ").split()
 list_vowels = list('аеёиоуыэюя')
+
 poem_Puh_vowels = list()
 for item in poem_Puh:
     count = 0
@@ -17,7 +18,7 @@ for item in poem_Puh:
         if char in list_vowels:
             count += 1
     poem_Puh_vowels.append(count)
-print(poem_Puh_vowels)
+# print(poem_Puh_vowels)
 
 count = 0
 for i in range(len(poem_Puh_vowels)-1):
@@ -25,5 +26,6 @@ for i in range(len(poem_Puh_vowels)-1):
         count += 1
     else:
         print('Парам пам')
+        break
     if count == len(poem_Puh_vowels)-1:
         print('Парам пам-пам')
