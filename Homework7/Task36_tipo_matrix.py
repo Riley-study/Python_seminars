@@ -15,17 +15,6 @@
 
 num_rows, num_columns = 6, 6
 
-# def print_operation_table(rows, columns):
-#     for i in range(1, rows+1):
-#         res_list = list()
-#         for j in range(1, columns + 1):
-#             res_list.append(i * j)
-#         print(*res_list)
-#
-#
-# print_operation_table(num_rows, num_columns)
-
-
 def print_operation_table(x, y):
     list_a = [i for i in range(1, x+1)]
     for item in range(1, y+1):
@@ -33,8 +22,3 @@ def print_operation_table(x, y):
         print(*list_b)
 
 print_operation_table(num_rows, num_columns)
-
-def operation (list_num, y):
-    for item in range(1, y+1):
-        list_res = list(map(lambda i: i * item, list_num))
-        print(*list_res)
