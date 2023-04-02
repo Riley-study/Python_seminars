@@ -8,19 +8,14 @@
 # **Ввод:** пара-ра-рам рам-пам-папам па-ра-па-да
 # **Вывод:** Парам пам-пам
 
-poem_Puh = input("Винни-Пух, напиши свое стихотворение: ")
+poem_Puh = input("Винни-Пух, напиши свое стихотворение: ").split()
 list_vowels = list('аеёиоуыэюя')
-
-poem_Puh_list = poem_Puh.split()
-# print(poem_Puh_list)
-
 poem_Puh_vowels = list()
-
-for item in poem_Puh_list:
+for item in poem_Puh:
     count = 0
     for char in item:
         if char in list_vowels:
-            count +=1
+            count += 1
     poem_Puh_vowels.append(count)
 print(poem_Puh_vowels)
 
