@@ -15,10 +15,15 @@
 
 num_rows, num_columns = 6, 6
 
-def print_operation_table(x, y):
+
+def func1(x, y):
+    return x * y
+
+def print_operation_table(func, x, y):
     list_a = [i for i in range(1, x+1)]
     for item in range(1, y+1):
-        list_b = list(map(lambda i: i * item, list_a))
+        list_b = list(map(lambda i: func(i, item), list_a))
         print(*list_b)
 
-print_operation_table(num_rows, num_columns)
+print_operation_table(func1, num_rows, num_columns)
+
