@@ -26,17 +26,34 @@ def add_contact():
     file.write(f'\n{new_contact}')
     file.close()
 
-def delete_contact():
+
+def delete_contact():  # через резервную копию справочника
     file = open('sample1.txt', 'r', encoding='UTF-8')
+    file_res = open('sample_reserve.txt', 'w+', encoding='UTF-8')
     find_str = input("3. Удалить контакт. Введите имя контакта: ")
     data = file.readlines()
     for line in data:
         if find_str in line:
             print(line)
-    confirm_msg = input("Удалить этот контакт? (да/нет): ") # подтверждение, если нашел не то контакт или несколько
+    confirm_msg = input("Удалить этот контакт? (да/нет): ")   # подтверждение, если нашел не то контакт или несколько
     if confirm_msg == "да":
-
+        for line in data:
+            if find_str not in line:
+                file_res.write(line)
+        print("Контакт удален")
+    else:
+        for line in data:
+            file_res.write(line)
     file.close()
+    file_res.close()
+# восстанавливаем из резервной копии
+    file = open('sample1.txt', 'w', encoding='UTF-8')
+    file_res = open('sample_reserve.txt', 'r', encoding='UTF-8')
+    data_res = file_res.readlines()
+    for line in data_res:
+        file.write(line)
+    file.close()
+    file_res.close()
 
 
 def find_contact():
@@ -47,6 +64,7 @@ def find_contact():
         if find_str in line:
             print(line)
     file.close()
+
 
 def exit_message():
     print("6. Выход. Благодарим за внимание, до новых встреч!")
@@ -59,7 +77,7 @@ def change_contact():
     for line in data:
         if find_str in line:
             print(line)
-    confirm_msg = input("Изменить этот контакт? (да/нет): ") # подтверждение, если нашел не то контакт или несколько
+    confirm_msg = input("Изменить этот контакт? (да/нет): ")  # подтверждение, если нашел не то контакт или несколько
     if confirm_msg == "да":
         new_name = input("4. Введите НОВЫЕ данные через ';' : ")
         for item in data:

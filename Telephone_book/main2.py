@@ -4,7 +4,7 @@ readfile.all_menu()
 
 start = True
 while start == True:
-    user_choice = input("Введите номер пункта меню либо 0 для повторного вызова меню: ")
+    user_choice = input("\nВведите номер пункта меню либо 0 для повторного вызова меню: ")
     if user_choice == '1':
         readfile.show_all()
     elif user_choice == '2':
