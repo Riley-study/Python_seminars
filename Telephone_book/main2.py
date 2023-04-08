@@ -1,13 +1,25 @@
 import readfile
+#if __name__ == "__main2.py__":
+readfile.all_menu()
 
-# if __name__ == "__main2.py__":
-print("Menu: ")
-print("1. Показать всю телефонную книгу: ")
-print("2. Добавить новую запись: ")
-print("3. Редактировать существующую запись: ")
-print("4. Поиск контакта: ")
-
-user_choice = int(input("Введите номер пункта меню: "))
-if user_choice == 1:
-    readfile.show_all(user_choice)
-
+start = True
+while start == True:
+    user_choice = input("Введите номер пункта меню либо 0 для повторного вызова меню: ")
+    if user_choice == '1':
+        readfile.show_all()
+    elif user_choice == '2':
+        readfile.add_contact()
+    elif user_choice == '3':
+        readfile.delete_contact()
+    elif user_choice == '4':
+        readfile.change_contact()
+    elif user_choice == '5':
+        readfile.find_contact()
+    elif user_choice == '0':
+        readfile.all_menu()
+    elif user_choice == '6':
+        start = False
+        readfile.exit_message()
+        break
+    else:
+        print("Что-то пошло не так, попробуйте еще раз ")
