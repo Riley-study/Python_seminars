@@ -50,6 +50,7 @@ def confirm(massage) -> bool:
     else:
         return False
 
+
 def find_contact(user_request: str) -> list[dict]:
     global phone_book
     result = []
@@ -74,4 +75,3 @@ def change_contact(contact: tuple[int, dict]) -> None:
 def del_contact(index: int) -> str:
     deleted_contact = phone_book.pop(index-1)
     return deleted_contact.get('name')
-
