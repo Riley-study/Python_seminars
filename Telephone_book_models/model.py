@@ -26,13 +26,14 @@ def add_new_contact(contact: dict):
 
 
 def save_book():
-    global phone_book
+    global phone_book, phone_book_start
     data = []
     for contact in phone_book:
         data.append(';'.join([value for value in contact.values()]))
     data = '\n'.join(data)
     with open(PATH, 'w', encoding='UTF-8') as file:
         file.write(data)
+    phone_book_start = phone_book.copy()
 
 
 def exit_book() -> bool:
